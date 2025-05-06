@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursider Scripts - Roblox Assets Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="index.html">Cursider Scripts</a>
+            </div>
+            
+            <div class="search-form">
+                <input type="text" placeholder="Search scripts, UI kits, modules...">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="nav-links">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="user-icon">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Premium Roblox Scripts & Assets</h1>
+                <p>Enhance your Roblox games with professional scripts and assets</p>
+                <button class="cta-button">Browse Collection</button>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="scripts">Scripts</button>
+                <button class="category-btn" data-category="ui-kits">UI Kits</button>
+                <button class="category-btn" data-category="modules">Modules</button>
+                <button class="category-btn" data-category="systems">Systems</button>
+            </div>
+            
+            <div class="products-grid" id="products-container">
+                <!-- Products will be loaded dynamically with JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Cursider Scripts</h3>
+                <p>Professional Roblox assets for developers of all levels.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="products.html?category=scripts">Scripts</a></li>
+                    <li><a href="products.html?category=ui-kits">UI Kits</a></li>
+                    <li><a href="products.html?category=modules">Modules</a></li>
+                    <li><a href="products.html?category=systems">Systems</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates on new products and promotions.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cursider Scripts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Template (hidden) -->
+    <template id="product-template">
+        <div class="product-card">
+            <a href="product.html?id={id}">
+                <div class="product-image">
+                    <img src="{imageUrl}" alt="{name}">
+                </div>
+                <div class="product-info">
+                    <h3>{name}</h3>
+                    <div class="product-rating">
+                        <span class="stars">{stars}</span>
+                        <span class="reviews">({reviewCount})</span>
+                    </div>
+                    <p class="product-description">{shortDescription}</p>
+                    <div class="product-price">${price}</div>
+                </div>
+            </a>
+            <button class="add-to-cart-btn" data-id="{id}">Add to Cart</button>
+        </div>
+    </template>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
