@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Cursider Scripts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Cursider</h2>
+                <p>Admin Panel</p>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active">
+                        <a href="admin.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-products.html">
+                            <i class="fas fa-box"></i>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-orders.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-customers.html">
+                            <i class="fas fa-users"></i>
+                            Customers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-settings.html">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="admin-logout">
+                <a href="index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="admin-content">
+            <header class="admin-header">
+                <div class="admin-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                
+                <div class="admin-user">
+                    <div class="admin-notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    
+                    <div class="admin-profile">
+                        <img src="https://via.placeholder.com/40" alt="Admin Profile">
+                        <span>Cursider</span>
+                    </div>
+                </div>
+            </header>
+            
+            <main class="admin-main">
+                <div class="dashboard-welcome">
+                    <h1>Welcome back, Cursider</h1>
+                    <p>Here's what's happening with your store today</p>
+                </div>
+                
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon sales">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Sales</h3>
+                            <p class="stat-value">$1,248.42</p>
+                            <p class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 24.5% since last week
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon orders">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Orders</h3>
+                            <p class="stat-value">64</p>
+                            <p class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 12.3% since last week
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon customers">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Customers</h3>
+                            <p class="stat-value">128</p>
+                            <p class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 18.7% since last week
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon products">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Products</h3>
+                            <p class="stat-value">8</p>
+                            <p class="stat-change neutral">
+                                <i class="fas fa-minus"></i> No change
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-sections">
+                    <!-- Recent Orders Section -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h2>Recent Orders</h2>
+                            <a href="admin-orders.html" class="view-all">View All</a>
+                        </div>
+                        
+                        <div class="section-content">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-5289</td>
+                                        <td>John Smith</td>
+                                        <td>Advanced Combat System</td>
+                                        <td>May 5, 2025</td>
+                                        <td>$24.99</td>
+                                        <td><span class="status completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-5288</td>
+                                        <td>Emily Johnson</td>
+                                        <td>Modern UI Kit</td>
+                                        <td>May 5, 2025</td>
+                                        <td>$19.99</td>
+                                        <td><span class="status completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-5287</td>
+                                        <td>Michael Davis</td>
+                                        <td>Vehicle Physics Module</td>
+                                        <td>May 4, 2025</td>
+                                        <td>$29.99</td>
+                                        <td><span class="status completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-5286</td>
+                                        <td>Sarah Wilson</td>
+                                        <td>Economy & Currency System</td>
+                                        <td>May 4, 2025</td>
+                                        <td>$22.99</td>
+                                        <td><span class="status processing">Processing</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-5285</td>
+                                        <td>David Brown</td>
+                                        <td>Character Customization System</td>
+                                        <td>May 3, 2025</td>
+                                        <td>$27.99</td>
+                                        <td><span class="status completed">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Products Section -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h2>Top Products</h2>
+                            <a href="admin-products.html" class="view-all">View All</a>
+                        </div>
+                        
+                        <div class="section-content">
+                            <div class="product-stats">
+                                <div class="product-stat-item">
+                                    <div class="product-info">
+                                        <img src="https://via.placeholder.com/50?text=UI+Kit" alt="Modern UI Kit">
+                                        <div>
+                                            <h4>Modern UI Kit</h4>
+                                            <p>UI Kits</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-stat">
+                                        <p class="sales-value">$599.70</p>
+                                        <div class="sales-bar">
+                                            <div class="sales-progress" style="width: 80%;"></div>
+                                        </div>
+                                        <p class="sales-count">30 sales</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-stat-item">
+                                    <div class="product-info">
+                                        <img src="https://via.placeholder.com/50?text=Combat" alt="Advanced Combat System">
+                                        <div>
+                                            <h4>Advanced Combat System</h4>
+                                            <p>Scripts</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-stat">
+                                        <p class="sales-value">$499.80</p>
+                                        <div class="sales-bar">
+                                            <div class="sales-progress" style="width: 70%;"></div>
+                                        </div>
+                                        <p class="sales-count">20 sales</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-stat-item">
+                                    <div class="product-info">
+                                        <img src="https://via.placeholder.com/50?text=Vehicle" alt="Vehicle Physics Module">
+                                        <div>
+                                            <h4>Vehicle Physics Module</h4>
+                                            <p>Modules</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-stat">
+                                        <p class="sales-value">$329.89</p>
+                                        <div class="sales-bar">
+                                            <div class="sales-progress" style="width: 50%;"></div>
+                                        </div>
+                                        <p class="sales-count">11 sales</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
